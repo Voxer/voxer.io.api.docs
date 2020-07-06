@@ -1,0 +1,12 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/VoxerKit/Classes/Conversation.swift",
+      "line": 16,
+      "symbol": "Conversation.receiverUserId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift"
+}
