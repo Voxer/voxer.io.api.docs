@@ -12,6 +12,13 @@
 ## VoxerKitDemo App
 To run the VoxerKitDemo, simply open "VoxerKitDemo.xcworkspace" with Xcode and select "VoxerKitDemo" target to run it on the simulator.
 
+## Depenencies
+The Voxer SDK has the following dependencies. Please add them to your dependency manager such as CocoaPod Podfile or Swift Package Manager.
+- 'KeychainAccess', '4.1.0'
+- 'ReachabilitySwift', '5.0.0'
+- 'OpenGraph', '1.0.5'
+- 'SwiftyBeaver', '1.8.4'
+
 ## Xcode Setup
 The VoxerKit framework is a fat framework that contains both real iOS device and simulator architecture. They means you can use this framework to run on both physical device and simulator. 
 
