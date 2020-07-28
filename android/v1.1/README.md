@@ -1,4 +1,4 @@
-# Voxer Android SDK v0.5
+# Voxer Android SDK v1.1
 
 ### Feature description
 
@@ -9,6 +9,7 @@
 5. **Walkie Talkie Feature (Play)** After the user starts the chat with any user by explicitly calling start conversation, any incoming live audio message will be played out loud regardless of whether app is in background or foreground. SDK will continue to play live audio outloud from there on until user explicitly calls logout.
 6. **Walkie Talkie Feature (Record)** Users can record an audio to a conversation using an external button. User has to mark the conversation as primary to enable this feature. At any given time only one conversation can be marked as primary. If user marks a conversation as primary while some other conversation is already marked as primary, sdk overrides the older selection with the latest selection. 
 7. **Audio Focus** Sdk respects audio focus rules of the ecosystem. It stops audio playback if user picks up a call. It lowers the volume upon loosing audio focus for brief period of time and restores the audio playback volume upon regaining the focus. It also stops audio playback upon completely loosing audio focus. Sdk only starts audio recording if no phone call is in progress. 
+8. **Audio Routing** Sdk can route audio through bluetooth headset(supports HFP or A2DP profile), wired headset, earpiece or phone speaker. User can explicitly choose to play from either earpiece or speaker, if neither wired headset or bluetooth headset is connected.
 
 ### Initialize Voxer SDK 
 
