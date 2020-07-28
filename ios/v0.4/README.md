@@ -27,7 +27,8 @@ However, when you submit your app to the App Store, you have to strip the VoxerK
 1. Download the VoxerKit.framework
 2. Add the VoxerKit.framework to your Xcode project. 
 3. Under your project "General -> Targets -> Frameworks, Libraries, and Embedded Content", make sure VoxerKit.framework is on the list and "Embed & Sign" is selected.
-4. Add a script to strip the VoxerKit.framework simulator architecture. Go to your target's "Build Phases" and add a "New Run Script Phases". Add the following script: 
+4. Go to your project "Build Settings -> Enable Bitcode" and set it to NO.
+5. Add a script to strip the VoxerKit.framework simulator architecture. Go to your target's "Build Phases" and add a "New Run Script Phases". Add the following script: 
 
 ```
 # Don't run this script if it's not a release configuration
