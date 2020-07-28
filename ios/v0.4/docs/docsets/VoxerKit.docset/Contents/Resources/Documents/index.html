@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VoxerKit  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="VoxerKit  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">VoxerKit 0.4.0 Docs</a> (29% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">VoxerKit Reference</a>
+        <img id="carat" src="img/carat.png" />
+        VoxerKit  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/Conversation.html">Conversation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Voxer.html">Voxer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/PlayableState.html">PlayableState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/Playable.html">Playable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/PlayableObserver.html">PlayableObserver</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:8VoxerKit23PlayableObserverWrapperV">PlayableObserverWrapper</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:8VoxerKit15OnRecordedChunka">OnRecordedChunk</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='voxer-ios-sdk-v0-4' class='heading'>Voxer iOS SDK v0.4</h1>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>A deployment target of iOS 11 and above is required</li>
+<li>Xcode 11</li>
+</ul>
+<h2 id='features' class='heading'>Features</h2>
+
+<ul>
+<li>Login with any users using App ID and App Secret</li>
+<li>Users can send and receive text &amp; audio messages</li>
+<li>For the receiver to receive and play live audio message, it has to be on the conversation screen.</li>
+</ul>
+<h2 id='voxerkitdemo-app' class='heading'>VoxerKitDemo App</h2>
+
+<p>To run the VoxerKitDemo, simply open &ldquo;VoxerKitDemo.xcworkspace&rdquo; with Xcode and select &ldquo;VoxerKitDemo&rdquo; target to run it on the simulator.</p>
+<h2 id='depenencies' class='heading'>Depenencies</h2>
+
+<p>The Voxer SDK has the following dependencies. Please add them to your dependency manager such as CocoaPod Podfile or Swift Package Manager.</p>
+
+<ul>
+<li>&lsquo;KeychainAccess&rsquo;, &lsquo;4.1.0&rsquo;</li>
+<li>&lsquo;ReachabilitySwift&rsquo;, &lsquo;5.0.0&rsquo;</li>
+<li>&lsquo;OpenGraph&rsquo;, &lsquo;1.0.5&rsquo;</li>
+<li>&lsquo;SwiftyBeaver&rsquo;, &lsquo;1.8.4&rsquo;</li>
+</ul>
+<h2 id='xcode-setup' class='heading'>Xcode Setup</h2>
+
+<p>The VoxerKit framework is a fat framework that contains both real iOS device and simulator architecture. They means you can use this framework to run on both physical device and simulator. </p>
+
+<p>However, when you submit your app to the App Store, you have to strip the VoxerKit framework simulator architecture. Otherwise, the App Store will reject your app. </p>
+
+<ol>
+<li>Download the VoxerKit.framework</li>
+<li>Add the VoxerKit.framework to your Xcode project.</li>
+<li>Under your project &ldquo;General -&gt; Targets -&gt; Frameworks, Libraries, and Embedded Content&rdquo;, make sure VoxerKit.framework is on the list and &ldquo;Embed &amp; Sign&rdquo; is selected.</li>
+<li>Add a script to strip the VoxerKit.framework simulator architecture. Go to your target&rsquo;s &ldquo;Build Phases&rdquo; and add a &ldquo;New Run Script Phases&rdquo;. Add the following script:</li>
+</ol>
+<pre class="highlight plaintext"><code># Don't run this script if it's not a release configuration
+if [ "${CONFIGURATION}" != "Release" ]; then
+    exit 0
+fi
+
+APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
+
+# Find VoxerKit.framework and remove the simulator architecture.
+find "$APP_PATH" -name 'VoxerKit.framework' -type d | while read -r FRAMEWORK
+do
+    FRAMEWORK_EXECUTABLE_NAME=$(defaults read "$FRAMEWORK/Info.plist" CFBundleExecutable)
+    FRAMEWORK_EXECUTABLE_PATH="$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME"
+    echo "Executable is $FRAMEWORK_EXECUTABLE_PATH"
+
+    EXTRACTED_ARCHS=()
+
+    for ARCH in $ARCHS
+    do
+        echo "Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME"
+        lipo -extract "$ARCH" "$FRAMEWORK_EXECUTABLE_PATH" -o "$FRAMEWORK_EXECUTABLE_PATH-$ARCH"
+        EXTRACTED_ARCHS+=("$FRAMEWORK_EXECUTABLE_PATH-$ARCH")
+    done
+
+    echo "Merging extracted architectures: ${ARCHS}"
+    lipo -o "$FRAMEWORK_EXECUTABLE_PATH-merged" -create "${EXTRACTED_ARCHS[@]}"
+    rm "${EXTRACTED_ARCHS[@]}"
+
+    echo "Replacing original executable with thinned version"
+    rm "$FRAMEWORK_EXECUTABLE_PATH"
+    mv "$FRAMEWORK_EXECUTABLE_PATH-merged" "$FRAMEWORK_EXECUTABLE_PATH"
+done
+</code></pre>
+<h2 id='integration-programming-guide' class='heading'>Integration Programming Guide</h2>
+<h3 id='initialize-voxer-sdk' class='heading'>Initialize Voxer SDK</h3>
+<pre class="highlight plaintext"><code>let voxer: Voxer = Voxer(isBackgroundAudioEnable: true)
+</code></pre>
+<h3 id='authentication' class='heading'>Authentication</h3>
+<h4 id='log-in-to-the-voxer-network' class='heading'>Log in to the Voxer network</h4>
+
+<p>You can get the App ID and App Secret from the Voxer developer portal.</p>
+<pre class="highlight plaintext"><code>voxer.loginWith(username: username, appId: appId, appSecret: appSecret) { [weak self] response in
+    if response == .success {
+        print ("Login suceeded")
+    } else {
+        print ("Login failed")
+    }
+}
+</code></pre>
+<h4 id='check-if-a-user-is-already-logged-in' class='heading'>Check If a User is Already Logged In</h4>
+<pre class="highlight plaintext"><code>if voxer.loggedInUsername?.isEmpty == false {
+    // User already logged from previous session. 
+}
+</code></pre>
+<h4 id='log-out-of-the-voxer-network' class='heading'>Log out of the Voxer network</h4>
+
+<p>When this logout method is called, it destroys the local database. That means all the messages are deleted from the local device. </p>
+<pre class="highlight plaintext"><code>voxer.logout()
+</code></pre>
+<h3 id='start-a-conversation-with-another-user' class='heading'>Start a conversation with another user</h3>
+<pre class="highlight plaintext"><code>voxer.startConversation(with: "bob@localhost") { conversation in
+    if conversation != nil {
+        print("Successfully started a conversation.")
+    }
+}
+</code></pre>
+<h3 id='send-a-text-message' class='heading'>Send a text message</h3>
+<pre class="highlight plaintext"><code>conversation.send(text:"Hello Bob!")
+</code></pre>
+<h3 id='send-an-audio-message-on-voxer-network' class='heading'>Send an audio message on voxer network</h3>
+<h4 id='start-recording-an-audio-message' class='heading'>Start recording an audio message</h4>
+<pre class="highlight plaintext"><code>conversation.startRecording()
+</code></pre>
+<h4 id='end-recording-an-audio-message' class='heading'>End recording an audio message</h4>
+<pre class="highlight plaintext"><code>conversation.stopRecording()
+</code></pre>
+<h3 id='message-management' class='heading'>Message Management</h3>
+
+<p>iOS VoxerKit uses Core Data to store and manage message updates</p>
+<h4 id='message-status' class='heading'>Message Status</h4>
+
+<p>You can check the message status using <code>Message.state</code> and show the corresponding UI to your users. </p>
+<h4 id='resend-a-failed-message' class='heading'>Resend a failed message</h4>
+
+<p>If a message failed to send, you can use this method to resend it:</p>
+<pre class="highlight plaintext"><code>conversation.resend(message:message)
+</code></pre>
+<h4 id='fetch-all-messages' class='heading'>Fetch all messages</h4>
+
+<p>This code snippet assuming you are using a UITableView.</p>
+<pre class="highlight plaintext"><code>let messageFRC = self.conversation?.getMessageFetchedResultsController()
+messageFRC.delegate = self
+do {
+    try self.messageFRC.performFetch()
+} catch let error as NSError {
+    print("Failed to fetch messages: " + error.localizedDescription)
+}
+
+func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -&gt; UITableViewCell {
+    let message = self.messageFRC.object(at: indexPath)
+}
+</code></pre>
+<h4 id='listen-to-message-changes-to-the-conversation' class='heading'>Listen to message changes to the conversation</h4>
+
+<p>You will need to implement <code>NSFetchedResultsControllerDelegate</code>:</p>
+<pre class="highlight plaintext"><code>func controllerWillChangeContent(_ controller: NSFetchedResultsController&lt;NSFetchRequestResult&gt;) {
+    self.tableView.beginUpdates()
+}
+
+func controllerDidChangeContent(_ controller: NSFetchedResultsController&lt;NSFetchRequestResult&gt;) {
+    self.tableView.endUpdates()
+}
+
+func controller(_ controller: NSFetchedResultsController&lt;NSFetchRequestResult&gt;, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+
+    guard let index = indexPath ?? (newIndexPath ?? nil) else { return }
+
+    switch type {
+    case .insert:
+        guard let message = anObject as? Message else { return }
+        tableView.insertRows(at: [index], with: .top)
+        if message.contentType == .audio {
+            self.newMessageIndex = index
+        }
+    default:
+        // Handle other cases as needed.
+        return
+    }
+}
+</code></pre>
+<h2 id='apis-documentation' class='heading'>APIs Documentation</h2>
+
+<p>API documentation can be found here: docs/index.html</p>
+<h2 id='debugging' class='heading'>Debugging</h2>
+<h3 id='using-local-stand-alone-server-for-development' class='heading'>Using local stand alone server for development</h3>
+
+<p>Talk to Voxer dev team if you want more details on how to run a local stand alone server.</p>
+
+<p>To use a local stand alone server, you can add an environment variable in your app launch argument. </p>
+
+<p>Go to your Xcode project scheme; select &ldquo;Run&rdquo; and then select the &ldquo;Arguments&rdquo; tab. </p>
+
+<p>Under &ldquo;Environment Variables&rdquo; section; add &ldquo;localhost_ip&rdquo; as the Name and set your localhost IP as the Value. Make sure to select the checkbox. </p>
+
+<p>That&rsquo;s it! Now when you run your app, it will try to connect to the local stand alone server instead of the production server. </p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://www.voxer.com" target="_blank" rel="external">Voxer</a>. All rights reserved. (Last updated: 2020-07-27)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

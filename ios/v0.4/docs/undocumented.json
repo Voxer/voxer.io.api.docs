@@ -1,0 +1,285 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 11,
+      "symbol": "PlayableObserver",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 12,
+      "symbol": "PlayableObserver.playable(_:didChangeState:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 13,
+      "symbol": "PlayableObserver.playable(_:didUpdatePosition:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 14,
+      "symbol": "PlayableObserver.playable(_:didUpdateDuration:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 15,
+      "symbol": "PlayableObserver.playableWaitingForData(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 16,
+      "symbol": "PlayableObserver.playableDidComplete(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 19,
+      "symbol": "PlayableObserver",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 20,
+      "symbol": "PlayableObserver.playable(_:didChangeState:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 21,
+      "symbol": "PlayableObserver.playable(_:didUpdatePosition:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 22,
+      "symbol": "PlayableObserver.playable(_:didUpdateDuration:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 23,
+      "symbol": "PlayableObserver.playableWaitingForData(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 24,
+      "symbol": "PlayableObserver.playableDidComplete(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 27,
+      "symbol": "PlayableObserverWrapper",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 31,
+      "symbol": "PlayableState",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 32,
+      "symbol": "PlayableState.paused",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 33,
+      "symbol": "PlayableState.playing",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 34,
+      "symbol": "PlayableState.recording",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 37,
+      "symbol": "OnRecordedChunk",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 39,
+      "symbol": "Playable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 40,
+      "symbol": "Playable.observers",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 41,
+      "symbol": "Playable.state",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 42,
+      "symbol": "Playable.url",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 43,
+      "symbol": "Playable.expectedDuration",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 44,
+      "symbol": "Playable.duration",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 45,
+      "symbol": "Playable.position",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 46,
+      "symbol": "Playable.timestamp",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 47,
+      "symbol": "Playable.format",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 48,
+      "symbol": "Playable.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 49,
+      "symbol": "Playable.isLive",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 51,
+      "symbol": "Playable.play()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 52,
+      "symbol": "Playable.pause()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 53,
+      "symbol": "Playable.seek(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 54,
+      "symbol": "Playable.startRecording(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 55,
+      "symbol": "Playable.stopRecording()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 56,
+      "symbol": "Playable.getTotalAaudioDataByteSize()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 59,
+      "symbol": "Playable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 61,
+      "symbol": "Playable.addObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/Media/Classes/Protocols/Playable.swift",
+      "line": 66,
+      "symbol": "Playable.removeObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/VoxerKit/Classes/Conversation.swift",
+      "line": 16,
+      "symbol": "Conversation.receiverUserId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift/VoxerKit/VoxerKit/Classes/Conversation.swift",
+      "line": 21,
+      "symbol": "Conversation.voxer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/se7en8/dev/voxer/voxer.io/sdks/swift"
+}
