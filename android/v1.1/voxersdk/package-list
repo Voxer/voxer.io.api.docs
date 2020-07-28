@@ -1,0 +1,6 @@
+$dokka.format:gfm
+$dokka.linkExtension:md
+
+com.rebelvox.voxersdk
+com.rebelvox.voxersdk.conversation
+com.rebelvox.voxersdk.synchronization
