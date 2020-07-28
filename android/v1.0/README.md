@@ -1,4 +1,4 @@
-# Voxer Android SDK v0.5
+# Voxer Android SDK v1.0
 
 ### Feature description
 
