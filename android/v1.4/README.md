@@ -1,4 +1,4 @@
-# Voxer Android SDK v1.3
+# Voxer Android SDK v1.4
 
 ### Feature description
 
@@ -12,6 +12,9 @@
 8. **Audio playback routing** Sdk can route audio through bluetooth headset(supports HFP or A2DP profile), wired headset, earpiece or phone speaker. User can explicitly choose to play from either earpiece or speaker, if neither wired headset or bluetooth headset is connected.
 
 9. **Audio mic routing** Sdk can record audio from phone mic, wired headset or bluetooth headset. Sdk automically switch to wired headset or bluetooth headset if any one of them is connected. Once the user disconnects external mic, the sdk defaults to phone mic. 
+
+10. **Group Chat** Users can start a group chat with one or more users. The chat creator is assigned the admin role. All the members of the chat can view the list of members in that chat. Users can view the sender name and the time stamp of every incoming message.
+
 ### Initialize Voxer SDK 
 
 #### With default feature - play audio in background enabled
@@ -50,10 +53,10 @@ Voxer.getInstance(application).login (username,appId, appSecret)
  
  ```
 
-### Initialize Voxer SDK and start a new chat with the given user
+### Initialize Voxer SDK and start a new chat with the list of unique users
 
 ```
-voxer.startChatWith(otherUserId, lifecycle, chatStarterCallback)
+voxer.startChatWith(otherUserIds, lifecycle, chatStarterCallback)
 ```
 
 Here is the code snippet which. shows sample chatStarterCallback : 
@@ -179,5 +182,14 @@ voxer.clearChatListObserver()
 ```
 
 ### APIs
+
+### Upcoming features
+
+10.***Group Management*** User can start a new group chat with or without adding other members. Once a user starts a new chat, he/she is assigned an admin role for that chat. Admin can add new members to the group using their unique user id. Admin can also remove the member from the given chat. Admin can also rename the chat at any given time. New user can join an existing chat given it's chat id. Chat Member can leave the chat at any given time.
+
+11.***Delete Chat*** Group admin can delete a given chat at any given time. Once the chat is deleted, chat cannot be accessed by any member. It will delete all the related metadata and the associated messages. 
+
+12.***Audio playlist*** User can play all the the unheard messages in a given chat sequentially.
+
 
 Description of the  APIs showcased above can be found [here](docs/voxersdk/index.md)

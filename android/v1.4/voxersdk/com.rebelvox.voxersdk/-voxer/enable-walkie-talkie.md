@@ -9,4 +9,4 @@ There can only be one chatId enabled for walkie talkie. If there is already a ch
 
 ### Parameters
 
-`The` - chatId to enable.
+`chatId` - to enable.

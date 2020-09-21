@@ -13,6 +13,4 @@ The app must be given permission to record audio before calling this function
 
 `messageCallbacks` -
 
-`audioRecorderCallbacks` -
-
-`stopRecordingCallback` - 
+`audioRecorderCallbacks` - 

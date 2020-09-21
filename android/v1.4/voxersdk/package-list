@@ -3,4 +3,6 @@ $dokka.linkExtension:md
 
 com.rebelvox.voxersdk
 com.rebelvox.voxersdk.chat
+com.rebelvox.voxersdk.groupManagementCallbacks
 com.rebelvox.voxersdk.synchronization
+com.rebelvox.voxersdk.utils
